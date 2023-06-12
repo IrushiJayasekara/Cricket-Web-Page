@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: rgb(48, 67, 45);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 25px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar .navbar-brand {
+    float: left;
+    display: block;
+    color: rgb(48, 67, 45);
+    text-align: center;
+    padding: 6.7px 14px;
+    text-decoration: none;
+}
+
+.navbarbo .navbar-brand {
+    float: left;
+    display: block;
+    color: rgb(48, 67, 45);
+    text-align: center;
+    padding: 8px 14px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+.navbar .navbar-brand:hover {
+    background: rgb(48, 67, 45);
+    color: black;
+}
+
+.navbarbo {
+    overflow: hidden;
+    background-color: rgb(48, 67, 45);
+    bottom: 0;
+    width: 100%;
+}
+
+.navbarbo a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 25px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbarbo a:hover {
+    background: #f1f1f1;
+    color: black;
+}
+
+.navbarbo .navbar-brand:hover {
+    background: rgb(48, 67, 45);
+    color: black;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 5px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgb(48, 67, 45);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+#myBtn:hover {
+    background-color: #555;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(good.jpg);
+    background-size: center;
+    background-size: cover;
+}
+
+.main {
+    padding: 16px;
+    margin-bottom: 30px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-size: larger;
+}
+
+input[type=submit] {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=button] {
+    background-color: black;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: darkslategray;
+}
+
+input[type=button]:hover {
+    background-color: darkslategrey;
+}
+
+.container {
+    border-radius: 5px;
+    padding: 10% 20%;
+}
+
+.card {
+    background-color: darkolivegreen;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 10%;
+    border-radius: 5px;
+    box-shadow: -20px -20px 30px 0 rgb(7, 56, 15), 20px 20px 10px -8px rgba(3, 44, 23, 0.27);
+}
+
+.display {
+    background-color: darkolivegreen;
+    padding-right: 20%;
+    padding-left: 20%;
+    padding-top: 0%;
+    margin-right: 10%;
+    border-radius: 5px;
+    border-color: black;
+    border-style: solid;
+    box-shadow: -20px -20px 30px 0 black, 20px 20px 10px -8px rgba(116, 150, 179, 0.27);
+}
+
+.title-card {
+    background-color: darkolivegreen;
+    margin-right: 10%;
+    box-shadow: -20px -20px 30px 0 #073a18, 20px 20px 10px -8px black;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h2 {
+    text-align: center;
+    font-family: cursive;
+    color: black;
+}
+
+h4 {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-size: larger;
+    font-weight: 100;
+}
+
+p {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 600px) {
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}

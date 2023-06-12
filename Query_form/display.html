@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <link rel='stylesheet' href='formstyle.css' type='text/css' />
+</head>
+
+<div class="navbar">
+
+    <a href="../About_Us/about.html">About us</a>
+    <a href="../Student_details/Details.html">Student details</a>
+    <a href="../Gallery_Additional/gallery.html">Gallery</a>
+    <a href="../Quiz/Quiz.html">Quiz</a>
+    <a href="../buyProduct/cricketcart11.html">Buy products</a>
+    <a href="../Query_form/queryform.html">Query Form</a>
+
+    <a class="navbar-brand" href="../main page/main.html">
+        <img src="lions.jfif" width="100" height="40" alt="">
+    </a>
+</div>
+
+
+
+
+
+
+<body onload="setData()">
+    <div class="container">
+        <!-- Querry details display here -->
+        <div class="card display" id="formDetails">
+            <div class="row">
+                <div class="title-card">
+                    <h2 class="title">Query Details</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <h4>Name:</h4>
+                </div>
+                <div class="col-75">
+                    <p id="name"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <h4>Email:</h4>
+                </div>
+                <div class="col-75">
+                    <p id="email"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <h4>Subject:</h4>
+                </div>
+                <div class="col-75">
+                    <p id="subject"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <h4>Details:</h4>
+                </div>
+                <div class="col-75">
+                    <p id="details"></p>
+                </div>
+            </div>
+            <div class="row" style="margin-top: -20px; margin-bottom: 5%;">
+                <input type="button" onclick="history.back()" value="Edit" style="margin-left: 20px;">
+                <input type="button" value="Send" onclick="sendMail()">
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="navbarbo">
+        <a href="../Editors/editor2.html">Editor</a>
+        <a href="../Query_form/queryform.html">Query Form</a>
+        <a href="#contact">Site Map</a>
+        <a class="navbar-brand" href="../main_page/main.html">
+            <img src="lions.jfif" width="100" height="40" alt="">
+        </a>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back To Top</button>
+
+
+    <script>
+        // Bind user input values from submitted form
+        function setData() {
+            document.getElementById("name").innerHTML = localStorage.name;
+            document.getElementById("email").innerHTML = localStorage.email;
+            document.getElementById("subject").innerHTML = localStorage.subject;
+            document.getElementById("details").innerHTML = localStorage.details;
+            document.getElementById('nameF').value = localStorage.name;
+        }
+        // Send the email after binding details
+        function sendMail() {
+            emailAddress = 'laksaduni@gmail.com'
+            document.getElementById("formDetails").style.display = "none";
+            var name = document.getElementById("name").innerHTML;
+            var email = document.getElementById("email").innerHTML;
+            var subject = document.getElementById("subject").innerHTML;
+            var details = document.getElementById("details").innerHTML;
+            // Mailto for sending the email
+            document.location.href = "mailto:" + emailAddress +
+                "?subject= Sending Querry Details" +
+                "&body=" + encodeURIComponent('Name =' + name + '\n' + 'Email =' + email + '\n' + 'Subject = ' + subject + '\n' + 'Details = ' + details);
+        }
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+
+
+
+</html>

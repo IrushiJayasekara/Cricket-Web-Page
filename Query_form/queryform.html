@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formstyle.css">
+
+
+</head>
+
+
+<body>
+    <div class="navbar">
+        <a href="../About_Us/about.html">About us</a>
+        <a href="../Student_details/Details.html">Student details</a>
+        <a href="../Gallery_Additional/gallery.html">Gallery</a>
+        <a href="../Quiz/Quiz.html">Quiz</a>
+        <a href="../buyProduct/cricketcart11.html">Buy products</a>
+        <a href="../Query_form/queryform.html">Query Form</a>
+
+
+        <a class="navbar-brand" href="../main_page/main.html">
+            <img src="lions.jfif" width="100" height="40" alt="">
+        </a>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="container">
+        <div class="card">
+            <div class="row">
+                <h2 class="title">Query Form</h2>
+            </div>
+            <!-- Form -->
+            <form id="form" method="GET" action="display.html" name="myForm" onsubmit="return(validate());">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="name" name="name" placeholder="Enter your name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="email" name="email" placeholder="Enter your email address">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="details">Details</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="details" name="details" placeholder="Enter your Query details" style="height:100px"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="col-75">
+                        <select id="subject" name="subject">
+                            <option disabled selected value=""> -- select a subject -- </option>
+                            <option value="Delivery">Delivery</option>
+                            <option value="History of cricket">History of cricket</option>
+                            <option value="Contact number">Contact number</option>
+                            <option value="Product varities">Product varities</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="View Query">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="navbarbo">
+        <a href="../Editors/editor2.html">Editor</a>
+        <a href="../Query_form/queryform.html">Query Form</a>
+        <a href="../Site Map/Site_Map.html">Site Map</a>
+        <a class="navbar-brand" href="../main_page/main.html">
+            <img src="lions.jfif" width="100" height="40" alt="">
+        </a>
+    </div>
+
+
+</body>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Back To Top</button>
+
+<script type="text/javascript">
+    // Form validation code will come here.
+    function validate() {
+        var fields = [];
+        if (document.myForm.name.value == "" || document.myForm.email.value == "" || document.myForm.details.value == "" || document.myForm.subject.value == "") {
+            if (document.myForm.name.value == "") {
+                fields.push("Name");
+                // alert("Please provide your name!");
+                // document.myForm.name.focus();
+                // return false;
+            }
+            if (document.myForm.email.value == "") {
+                fields.push("Email");
+                // alert("Please provide your Email!");
+                // document.myForm.email.focus();
+                // return false;
+            }
+            if (document.myForm.details.value == "") {
+                fields.push("Query Details");
+                // alert("Please provide query details!.");
+                // document.myForm.details.focus();
+                // return false;
+            }
+            if (document.myForm.subject.value == "") {
+                fields.push("Subject");
+                // alert("Please provide your subject!");
+                // return false;
+            }
+            alert("Please provide " + fields);
+            return false;
+        } else {
+            localStorage.name = document.getElementById("name").value;
+            localStorage.email = document.getElementById("email").value;
+            localStorage.details = document.getElementById("details").value;
+            localStorage.subject = document.getElementById("subject").value;
+            document.getElementById("form").submit();
+        }
+        return (true);
+    }
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+
+
+
+</html>
