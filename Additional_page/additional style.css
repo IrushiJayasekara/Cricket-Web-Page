@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: rgb(48, 67, 45);
+    top: 0;
+    width: 100%;
+    position: sticky;
+}
+
+.navbar a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 25px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar .navbar-brand {
+    float: left;
+    display: block;
+    color: rgb(48, 67, 45);
+    text-align: center;
+    padding: 6.7px 14px;
+    text-decoration: none;
+}
+
+.navbarbo .navbar-brand {
+    float: left;
+    display: block;
+    color: rgb(48, 67, 45);
+    text-align: center;
+    padding: 8px 14px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+.navbar .navbar-brand:hover {
+    background: rgb(48, 67, 45);
+    color: black;
+}
+
+.navbarbo {
+    overflow: hidden;
+    background-color: rgb(48, 67, 45);
+    bottom: 0;
+    width: 100%;
+}
+
+.navbarbo a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 25px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbarbo a:hover {
+    background: #f1f1f1;
+    color: black;
+}
+
+.navbarbo .navbar-brand:hover {
+    background: rgb(48, 67, 45);
+    color: black;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 5px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgb(48, 67, 45);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+#myBtn:hover {
+    background-color: #555;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(ground.jpg);
+    background-size: center;
+    background-size: cover;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+.row {
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col {
+    flex-basis: 50%;
+}
+
+h1 {
+    color: darkgoldenrod;
+    font-size: 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.card {
+    width: 200px;
+    height: 260px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 30px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.card1 {
+    background-image: url(galle2.jpg);
+}
+
+.card2 {
+    background-image: url(pallelke_2.jpg);
+}
+
+.card3 {
+    background-image: url(premadasa_2.jpg);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+h4 {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px;
+}
